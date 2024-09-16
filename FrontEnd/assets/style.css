@@ -1,0 +1,464 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+
+body {
+	max-width: 1440px;
+	width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans';
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0;
+}
+
+/*Header*/
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C;
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover,
+ a:hover {
+	color: #B1663C;
+}
+
+/*Introduction*/
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1;
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+
+/*Portfolio*/
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+	max-height: 490px;
+
+}
+
+/*Formulaire de contact*/
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+/*Footer*/
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em;
+}
+
+/* Filtres */
+.filter {
+	text-align: center;
+}
+
+.noClick{
+	font-family: 'Syne';
+	font-size: 16px;
+	font-weight: 700;
+	color: #1D6154;
+	background-color: white;
+	padding: 9px 21px ;
+	margin : 2em 10px ;
+	text-align: center;
+	border: solid 1px #1D6154;
+	border-radius: 60px;
+}
+
+.noClick:hover{
+	color: white;
+	background-color: #1D6154;
+}
+
+.click {
+	font-family: 'Syne';
+	font-size: 16px;
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	padding: 9px 21px ;
+	margin : 2em 10px ;
+	text-align: center;
+	border: solid 1px #1D6154;
+	border-radius: 60px;
+}
+
+/* Mode édition */
+.editMode{
+	background-color: black;
+	width: 1440px;
+	color: white;
+	height: 39px;
+	position: relative;
+	right: 150px;
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+li a {
+	text-decoration: none;
+	color: black;
+}
+
+.fa-pen-to-square {
+	width: 15px;
+	height: 15px;
+}
+
+#portfolio h2 span{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+h2 a, h2 i {
+	color: black;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+/*Modale*/
+.modal{
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	text-align: center;
+
+}
+
+.modal-wrapper{
+	overflow: auto;
+	width: 630px;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh - 20px);
+	padding: 20px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	gap: 50px;
+}
+
+.close-modal {
+	background-color: #ffff;
+	border: none;
+	display: flex;
+	justify-content: end;
+}
+
+.modal h2 {
+	color: black;
+	font-family: 'Work Sans';
+	font-size: 26px;
+	font-weight: 400;
+	text-align: center;
+}
+
+#validate input,
+.validate input {
+	width: 237px;
+	height: 36px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+/*Modale vue 1 */
+.images {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 0 100px;
+}
+
+.images img {
+	height: 102px;
+	width: 76px;
+}
+
+.delete-work {
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	background-color: black;
+	color: #ffff;
+	margin-top: 5px;
+	margin-left: 54px;
+}
+
+#validate {
+	border-top: solid 1px #b3b3b3 ;
+	margin: 0 100px;
+}
+
+#modal2 {
+	gap: 30px;
+}
+
+/*Modale vue 2*/
+.button-modal-2 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.button-modal-2 a {
+	color: black;
+}
+
+
+
+.add-work {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+
+
+
+.add-photo {
+	display: flex;
+	justify-content: center;
+}
+
+.fa-image {
+	position: relative;
+	top: 10px;
+	font-size: 76px;
+	color: rgba(185, 197, 204, 1);
+}
+
+.files {
+	position: relative;
+	top: 20px;
+	border-radius: 50px;
+	color: rgba(48, 102, 133, 1);
+	background-color: rgba(185, 197, 204, 1);
+	padding: 10px 40px;
+
+}
+
+.add-title-category {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 0 100px;
+	text-align: initial;
+}
+
+.title, .category {
+	font-family: 'Work Sans';
+	height: 51px;
+	background-color: white;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.p{
+	position: relative;
+	background-color: #E8F1F6;
+	border: none;
+	border-radius: 10px;
+	width: 420px;
+	height: 169px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.p, .p p {
+	z-index: 0;
+}
+
+.p input {
+	width: 178px;
+	position: relative;
+	bottom: 10px;
+	z-index: 1;
+	opacity: 0;
+}
+
+.p p {
+	font-size: 10px;
+}
+
+.validate input[type="submit"]:disabled{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: rgba(167, 167, 167, 1);
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px;
+}
+
+#file-preview {
+	height: 169px;
+	z-index: 2;
+}
