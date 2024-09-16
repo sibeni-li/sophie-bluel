@@ -1,8 +1,8 @@
 //Récupération des données de l'API
-const response = await fetch("http://localhost:5678/api/works/");
+const response = await fetch("https://sb-backend-xp1m.onrender.com/api/works/");
 const works = await response.json();
 
-const respbis = await fetch("http://localhost:5678/api/categories/");
+const respbis = await fetch("https://sb-backend-xp1m.onrender.com/api/categories/");
 const categories = await respbis.json();
 
 //Récupération du token dans le Local Storage
@@ -281,7 +281,7 @@ window.addEventListener("keydown", function (e) {
 
 // Fonction qui appelle l'API et qui génère les travaux et les images de la modale
 async function respReload() {
-    const responseReload = await fetch("http://localhost:5678/api/works/");
+    const responseReload = await fetch("https://sb-backend-xp1m.onrender.com/api/works/");
     const workReload = await responseReload.json();
 
     generWorks(workReload);
@@ -296,7 +296,7 @@ function deleteWorks(){
         element.addEventListener("click", async function (e) {
             e.preventDefault();
             const workId = this.closest(".work-img").dataset.id;
-            fetch("http://localhost:5678/api/works/" + workId, {
+            fetch("https://sb-backend-xp1m.onrender.com/api/works/" + workId, {
                 method: "DELETE",
                 headers: {
                     "accept": "*/*",
@@ -327,7 +327,7 @@ form.addEventListener("submit", async function (e) {
     const formData = new FormData(form);
 
     try{
-        const fetchAdd = await fetch("http://localhost:5678/api/works/", {
+        const fetchAdd = await fetch("https://sb-backend-xp1m.onrender.com/api/works/", {
             method: "POST",
             headers: {
                 "accept" : "application/json",
