@@ -5,7 +5,7 @@ const form = document.getElementById("connexion");
 function verifyLogin (username, password) {
     const data = {"email": username, "password": password};
 
-    fetch("https://sb-backend-xp1m.onrender.com/api/users/login", {
+    fetch("https://sb01.sibeni.dev/api/users/login", {
         method: "POST",
         headers: {
             "accept": "application/json",
